@@ -10,12 +10,15 @@ for i=1: n
 end
 P=closetozeroroundoff(C);
 
-B=rank(P)
+%test if P is a basis for R^n
+%for P to be a basis, B must equal n. 
+B=(rank(P)==n)
 
 % if basis 
+fprintf('The polynomials in B form a basis for R^%G \n',n) 
 (1) Find a row vector y of B-coordinates of the polynomial Q. Your output for this part should
 contain a message and the row vector y. The message might have a form:    
-fprintf(‘the coordinates of the polynomial Q with respect to the basis P are % \ n’) y = closetozeroroundoff(y)
+fprintf(â€˜the coordinates of the polynomial Q with respect to the basis P are % \ nâ€™) y = closetozeroroundoff(y)
 (Hint: to find y, you will be solving a system of equations)
 
 (2) Find the coordinate vector q of the polynomial R with respect to the standard basis, whose B-coordinates is the given vector r.
@@ -28,8 +31,8 @@ entries of the vector q as coefficients. Use the command
 poly2sym applied to the row vector q to get the polynomial R in the required form.
 
 %if not basis 
-sprintf(‘The polynomials in B do not form a basis for P/d,n-1')
-fprintf(‘the reduced echelon form of P is  \ n’)
+sprintf(â€˜The polynomials in B do not form a basis for P/d,n-1')
+fprintf(â€˜the reduced echelon form of P is  \ nâ€™)
 A=rref(P)
 return
 %end program 
