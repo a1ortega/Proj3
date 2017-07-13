@@ -15,7 +15,7 @@ P=closetozeroroundoff(C);
 B=(rank(P)==n)
 
 % if basis 
-fprintf('The polynomials in B form a basis for R^%G \n',n) 
+fprintf('The polynomials in B form a basis for P%G \n',(n-1)) 
 (1) Find a row vector y of B-coordinates of the polynomial Q. Your output for this part should
 contain a message and the row vector y. The message might have a form:    
 fprintf(‘the coordinates of the polynomial Q with respect to the basis P are % \ n’) y = closetozeroroundoff(y)
